@@ -12,6 +12,7 @@ endif ()
 # Add the library and specify all of its source files.
 add_library (hwbtc
   trezor.c
+  error.c
 )
 
 set_target_properties(hwbtc PROPERTIES
