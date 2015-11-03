@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.8)
-project (hwbtc)
+project (libhwbtc)
 
 option (BUILD_SHARED_LIBS "Build as shared library" TRUE)
 
@@ -25,11 +25,11 @@ macro(use_cxx11)
   endif ()
 endmacro(use_cxx11)
 
-set (HWBTC_VERSION_MAJOR 1)
-set (HWBTC_VERSION_MINOR 0)
-set (HWBTC_VERSION_PATCH 0)
+set (LIBHWBTC_VERSION_MAJOR 1)
+set (LIBHWBTC_VERSION_MINOR 0)
+set (LIBHWBTC_VERSION_PATCH 0)
 
-set (HWBTC_VERSION ${HWBTC_VERSION_MAJOR}.${HWBTC_VERSION_MINOR}.${HWBTC_VERSION_PATCH})
+set (LIBHWBTC_VERSION ${LIBHWBTC_VERSION_MAJOR}.${LIBHWBTC_VERSION_MINOR}.${LIBHWBTC_VERSION_PATCH})
 
 # Put libraries and executables in the top level of the bin directory
 # so that the executables can find the libraries and it is easy to run
@@ -51,3 +51,4 @@ if (WIN32)
 endif ()
 
 add_subdirectory (src)
+add_subdirectory (cli)
