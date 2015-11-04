@@ -1,9 +1,9 @@
 include (CheckIncludeFileCXX)
 
-# If catch.hpp is not present, we want to simply skip compiling the tests.  This
-# allows someone to compile and install libusbp without having catch installed.
-# The header can either be installed in this directory or in a standard system
-# location.
+# If catch.hpp is not present, we want to simply skip compiling the
+# tests.  This allows someone to compile and install the library
+# without having catch installed.  The header can either be installed
+# in this directory or in a standard system location.
 set (CMAKE_REQUIRED_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}")
 CHECK_INCLUDE_FILE_CXX (catch.hpp HAVE_CATCH_FRAMEWORK)
 if (NOT HAVE_CATCH_FRAMEWORK)
@@ -28,4 +28,4 @@ include_directories (
   "${CMAKE_BINARY_DIR}/src"
 )
 
-target_link_libraries(run_test usbp)
+target_link_libraries(run_test hwbtc)
